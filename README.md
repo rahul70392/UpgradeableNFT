@@ -28,8 +28,6 @@ Scenario 1: First-time deploy of all 3 contracts (Proxy, Admin and your actual c
     3.  The third is called "TransparentUpgradeableProxy" (example: https://mumbai.polygonscan.com/address/0xbf1774e5ba0fe942c7498b67ff93c509b723eb67#code) and this is the address that matches the `OpenZeppelin Proxy deployed to` in the output after running the deploy script. Let's call this `PROXY_ADDRESS`.
 -   upload source code so others can verify it on-chain via `npx hardhat verify --network testnet CONTRACT_ADDRESS`. Head back to Etherscan or Polygonscan and view #1 again. You should now see actual source code in the contract.
 -   `PROXY_ADDRESS` is that actual address used to interact with the contract, view on OpenSea, etc.
-    -   you can interact manually via the console -- see [Playing with Contract](#playing-with-contract) below
-    -   you can interact with on Etherscan or Polygonscan
 -   **IMPORTANT** You'll notice new files in `.openzeppelin` folder. It's important you keep these files and check them into the repository. They are required for upgrading the contract.
 
 Scenario 2: Upgrade your contract
@@ -42,8 +40,6 @@ If you upgrade contract without making any changes, the system will continue to 
 -   find the newly deployed contract (`CONTRACT_ADDRESS`) from steps above. You'll find the newest contract recently deployed by the deployer wallet labeled as "Contract Creation".
 -   upload source code so others can verify it on-chain via `npx hardhat verify --network testnet CONTRACT_ADDRESS`. Head back to Etherscan or Polygonscan and view #1 again. You should now see actual source code in the contract.
 -   `PROXY_ADDRESS` is that actual address used to interact with the contract, view on OpenSea, etc.
-    -   you can interact manually via the console -- see [Playing with Contract](#playing-with-contract) below
-    -   you can interact with on Etherscan or Polygonscan
 -   **IMPORTANT** You'll notice changed files in `.openzeppelin` folder. It's important you keep these files and check them into the repository. They are required for upgrading the contract.
 
 
